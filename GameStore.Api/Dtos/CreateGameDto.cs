@@ -1,11 +1,12 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace GameStore.Api.Dtos
 {
-    //Record was added in C# 9 and later, so Class was used instead. 
-    //See more info: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record
+    
     public record CreateGameDto(
-        string Name,
-        string Genre,
-        decimal Price,
+        [Required][StringLength(50)] string Name,
+        [Required][StringLength(20)] string Genre,
+        [Required][Range(1,100)] decimal Price,
         DateOnly ReleaseDate
 
     );

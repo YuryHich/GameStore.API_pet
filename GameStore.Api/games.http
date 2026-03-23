@@ -2,7 +2,7 @@ GET http://localhost:5053/games
 
 ###
 
-GET http://localhost:5053/games/1
+GET http://localhost:5053/games/4
 
 ###
 
@@ -20,9 +20,10 @@ Content-Type: application/json
 
 PUT http://localhost:5053/games/1
 Content-Type: application/json
+
 {
     "name": "Street Fighter 11 Remastered",
     "genre": "Figthing",
     "price": 29.19,
     "releaseDate": "1992-07-15"
-}
+} 
